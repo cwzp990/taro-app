@@ -1,0 +1,84 @@
+// 字体大小定义规范
+// 单位要大写 不然taro会转换单位
+$font_size_small: 12PX;
+$font_size_medium: 14PX;
+$font_size_medium_x: 16PX;
+$font_size_large: 18PX;
+$font_size_large_x: 22PX;
+
+// 背景图片地址和大小
+@mixin bis($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+// 定位全屏
+@mixin allcover {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+// 定位上下左右居中
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// 定位上下居中
+@mixin ct {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// 定位左右居中
+@mixin cl {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// 宽高
+@mixin wh($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// 字体大小、行高、字体
+@mixin font($size, $line-height, $family: 'Microsoft YaHei') {
+  font: #{$size}/#{$line-height} $family;
+}
+
+// 字体大小，颜色
+@mixin sc($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+
+// svg
+@mixin svg($size, $fill) {
+  font-size: $size;
+  fill: $fill;
+}
+
+// grid布局
+@mixin grid($row, $width) {
+  display: grid;
+  grid-column-gap: 50PX;
+  grid-row-gap: $row;
+  grid-template-columns: repeat(auto-fit, minmax($width, 1fr));
+  justify-content: space-between;
+}
+
+// 多行文本省略号
+@mixin nowraps($row) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $row;
+  word-break: break-all;
+  overflow: hidden;
+}
