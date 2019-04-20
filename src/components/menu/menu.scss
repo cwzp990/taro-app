@@ -1,5 +1,11 @@
 @import '../../styles/mixin.scss';
 
 .m-Menu {
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include wh(100%, 40PX);
+  .m-Menu-icon {
+    @include wh(24PX, 24PX);
+  }
 }

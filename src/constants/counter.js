@@ -1,2 +1,2 @@
-export const ADD = 'ADD'
-export const MINUS = 'MINUS'
+export const SET_CURRENT_CAT = 'SET_CURRENT_CAT'
+export const SET_DRAWER_STATUS = 'SET_DRAWER_STATUS'
